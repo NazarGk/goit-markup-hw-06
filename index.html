@@ -44,6 +44,46 @@
         <div data-modal class="bg-modal is-hidden">
             <div class="modal">
             <button data-modal-close type="button" class="btn-close"></button>
+
+            <form action="modal-form" class="modal-form">
+                <h2 class="modal-callback">Оставьте свои данные, мы вам перезвоним</h2>
+
+                <div class="modal-div">
+                <label for="name" class="modal-label">Имя</label>
+                <input type="name" name="name" class="modal-input" placeholder=" " id="name">
+                <svg class="modal-svg">
+                    <use href="./images/icons-modal.svg#person-modal"></use>
+                </svg>
+            </div>
+
+            <div class="modal-div">
+                <label for="tel" class="modal-label">Телефон</label>
+                <input type="tel" name="tel" class="modal-input" placeholder=" " id="tel">
+                <svg class="modal-svg">
+                    <use href="./images/icons-modal.svg#phone-modal"></use>
+                </svg>
+            </div>
+
+            <div class="modal-div">
+                <label for="emeil" class="modal-label">Почта</label>
+                <input type="emeil" name="emeil" class="modal-input" placeholder=" " id="emeil">
+                <svg class="modal-svg">
+                    <use href="./images/icons-modal.svg#email-modal"></use>
+                </svg>
+            </div>
+
+            <div class="modal-div">
+                <label for="comment" class="modal-label">Комментарий</label>
+                <textarea class="modal-textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+            </div>
+
+            <label for="checkbox" class="modal-label">
+            <input type="checkbox" name="agre with" class="checkbox" id="checkbox">
+                <span class="agre-with">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span>
+            </label>
+
+            <button type="submit" class="modal-btn">Отправить</button>
+            </form>
         </div>
     </div>
         </section>
@@ -317,7 +357,7 @@
             <div class="href-address">
             <a href="" class="title-down">Web<span class="accent-footer">Studio</span></a>
         <address>
-        <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
+        <p class="location">г. Киев, пр-т Леси Украинки, 26</p>
         <ul class="container-foot">
             <li class="content-li">
                 <a href="mailto:info@devstudio.com" class="mail"  target="_blank" rel="noreferrer noopener" >info@devstudio.com</a>   
@@ -361,6 +401,19 @@
         </li>
     </ul>
 </div>
+<form action="Submit" autocomplete="off" class="form">
+    <h3 class="comein">
+        Подпишитесь на рассылку
+    </h3>
+    <ul class="footer-form-list">
+        <li>
+            <input type="emeil" name="emeil" class="footer-form-input" placeholder="E-mail">
+        </li>
+        <li>
+            <button type="submit" class="footer-btn">Подписаться</button>
+        </li>
+    </ul>
+</form>
 </div>
     </footer>
     <script src="./js/modal.js"></script>
