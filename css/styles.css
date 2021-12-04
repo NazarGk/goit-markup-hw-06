@@ -53,6 +53,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
 .nav{
+    position: relative;
     display: flex;
     padding: 0px;
     margin: 0px;
@@ -77,9 +78,9 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
-.item-line{
+/* .item-line{
     position: relative;
-}
+} */
 
 
 .nav-list .item{
@@ -110,6 +111,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
 .headline_1{
+position: relative;
 font-weight: 500;
 font-size: 14px;
 line-height: 16px;
@@ -179,7 +181,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     content: "";
     position: absolute;
     bottom: -32px;
-    left: 0px;
+    left: 96px;
     width: 74px;
     border-bottom: 4px solid #2196F3;
     border-radius: 2px;
@@ -703,19 +705,26 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-color: rgba(0, 0, 0, 0.1);
     background-color: #fff;
     cursor: pointer;
-    transform: rotate(45deg);
-}
-
-.btn-close::after{
-    content: '+';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
+    /* background-image: url(../images/close-black.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%; */
 }
 
 
+
+
+.btn-close-cvg{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    /* outline: 2px solid black; */
+
+}
+
+.btn-close-cvg:hover,
+.btn-close-cvg:focus{
+fill: #2196F3;
+}
 
 
 .modal-form{
@@ -759,17 +768,25 @@ margin-bottom: 4px;
 .modal-input{
     padding-left: 42px;
     border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-style:solid;
 }
 
-.modal-input:hover{
+
+.modal-input:hover,
+.modal-input:focus{
     border-color: #2196F3;
 }
 
-
-.modal-input:hover + .modal-svg{
-fill: #2196F3;
+.modal-input:hover + .modal-svg,
+.modal-input:focus + .modal-svg{
+    fill: #2196F3;
 }
+
+
+/* .modal-input:hover  + .modal-svg{
+fill: #2196F3;
+} */
 
 .modal-svg{
     position: absolute;
@@ -809,6 +826,11 @@ fill: #2196F3;
     background-size: contain;
     background-repeat: no-repeat;
     border-color: transparent;
+    background-origin: padding-box;
+}
+
+.checkbox:focus + .agre-with::before{
+    border-color: currentColor;
 }
 
 .agre-with{
